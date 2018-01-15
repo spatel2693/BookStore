@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_view_cart_activity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.firebase.bookstore.viewCart_activity">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/cart_listview"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:choiceMode="multipleChoice"
+        android:scrollbars="horizontal|vertical"
+        android:fadingEdge="none|horizontal|vertical"
+        android:theme="@style/Widget.AppCompat.ListMenuView"
+        android:animateLayoutChanges="false"
+        android:animationCache="false"
+        android:fastScrollAlwaysVisible="false"
+        android:fastScrollEnabled="false"
+        android:fitsSystemWindows="false"
+        android:smoothScrollbar="true"
+        android:textDirection="ltr"
+        android:headerDividersEnabled="true"
+        android:footerDividersEnabled="true"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="Checkout"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkout"
+        android:fadingEdge="horizontal|vertical"
+        android:layout_alignWithParentIfMissing="true"
+        android:textSize="18sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:text="Total Price : $ 0 "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cart_listview"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="70dp"
+        android:id="@+id/totalPrice"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:textAllCaps="true"
+        android:textAlignment="textEnd" />
+
+    <Button
+        android:text="Delete"
+        android:layout_height="wrap_content"
+        android:id="@+id/cart_delete"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/checkout"
+        android:layout_alignBottom="@+id/checkout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="48dp"
+        android:layout_width="150dp" />
+
+</RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navgation_view"
+        app:menu="@menu/navigation_menu"
+        app:headerLayout="@layout/navigation_header"
+        android:layout_gravity="start">
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
+
+
